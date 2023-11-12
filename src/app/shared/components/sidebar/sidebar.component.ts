@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GifsService } from '../../../service/gifs.service';
+import { TrendingDatetime } from '../../../gifs/interfaces/gifs.interfaces';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,4 +15,7 @@ export class SidebarComponent {
     return [...this.gifsService.tagsHistory]
   }
 
+  onSearchTag(tag:string) {
+    return this.gifsService.searhTag(tag);
+  }
 }
